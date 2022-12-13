@@ -3,7 +3,7 @@ import { Container, NameText, Progess, UserPicture } from "./style";
 const UserInfo = ({ name, image, percentual }) => {
   return (
     <Container>
-      <UserInfo src={image} />
+      <UserPicture src={image} />
       <div>
         <NameText>{name}</NameText>
         <Progess percentual={percentual} />
@@ -11,3 +11,5 @@ const UserInfo = ({ name, image, percentual }) => {
     </Container>
   );
 };
+
+export { UserInfo };
