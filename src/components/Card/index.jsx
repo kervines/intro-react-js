@@ -14,10 +14,10 @@ import {
 const Card = () => {
   return (
     <CardContainer>
-      <ImageBackground />
+      <ImageBackground src="https://thumbs.dreamstime.com/b/c%C3%B3digo-fonte-de-programa%C3%A7%C3%A3o-computador-script-abstrato-background-html-desenvolvimento-uma-web-tela-ou-aplicativo-tecnologia-206610726.jpg" />
       <Content>
         <UserInfo>
-          <UserPicture />
+          <UserPicture src="https://avatars.githubusercontent.com/u/57775586?s=40&v=4" />
           <div>
             <h4>Kervin Espirito Santo</h4>
             <p>Há 1 minuto</p>
