@@ -10,7 +10,7 @@ import { Container, Title, TitleHighlight, Column } from "./style";
 const Feed = () => {
   return (
     <>
-      <Header />
+      <Header autenticado={true} />
       <Container>
         <Column flex={3}>
           <Title>Feed</Title>
