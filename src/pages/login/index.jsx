@@ -18,10 +18,10 @@ import {
 
 const Login = () => {
   const navigate = useNavigate();
-
   const handleClickSignIn = () => {
     navigate("/feed");
   };
+
   return (
     <>
       <Header />

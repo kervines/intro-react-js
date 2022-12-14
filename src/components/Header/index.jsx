@@ -22,7 +22,7 @@ const Header = ({ autenticado }) => {
           {autenticado ? (
             <>
               <BuscarInputContainer>
-                <Input placeholder="Buscar.." />
+                <Input placeholder="Buscar..." />
               </BuscarInputContainer>
               <Menu>Live Code</Menu>
               <Menu>Global</Menu>
