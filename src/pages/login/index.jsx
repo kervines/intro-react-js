@@ -45,9 +45,16 @@ const Login = () => {
           <Wrapper>
             <TitleLogin>Faça seu cadastro</TitleLogin>
             <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
-            <form>
-              <Input placeholder="E-mail" leftIcon={<MdEmail />} />
+            <form onSubmit={handleSubmit(onSubmit)}>
               <Input
+                name="email"
+                control={control}
+                placeholder="E-mail"
+                leftIcon={<MdEmail />}
+              />
+              <Input
+                name="password"
+                control={control}
                 placeholder="Senha"
                 type="password"
                 leftIcon={<MdLock />}
@@ -55,8 +62,8 @@ const Login = () => {
               <Button
                 title="Entrar"
                 variant="secondary"
-                onClick={handleClickSignIn}
-                type="button"
+                // onClick={handleClickSignIn}
+                type="submit"
               />
             </form>
             <Row>
