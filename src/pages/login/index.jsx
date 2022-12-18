@@ -20,6 +20,19 @@ import {
   Wrapper,
 } from "./style";
 
+const schema = yup
+  .object({
+    email: yup
+      .string()
+      .email("email nao é valido")
+      .required("Campo obrigatorio"),
+    password: yup
+      .string()
+      .min(3, "No minimo 3 caracteres")
+      .required("Campo obrigatorio"),
+  })
+  .required();
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -27,7 +40,11 @@ const Login = () => {
     control,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(schema),
+    mode: "onChange",
+  });
+
   const onSubmit = (data) => console.log(data);
 
   const handleClickSignIn = () => {
@@ -52,12 +69,14 @@ const Login = () => {
               <Input
                 name="email"
                 control={control}
+                errorMessage={errors?.email?.message}
                 placeholder="E-mail"
                 leftIcon={<MdEmail />}
               />
               <Input
                 name="password"
                 control={control}
+                errorMessage={errors?.password?.message}
                 placeholder="Senha"
                 type="password"
                 leftIcon={<MdLock />}
